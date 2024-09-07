@@ -7,7 +7,7 @@ import Home from './components/Home/Home'
 import Categories from './components/Categories/Categories'
 import Brands from './components/Brands/Brands'
 import Cart from './components/Cart/Cart'
-import Products from './components/Products/Products'
+// import Products from './components/Products/Products'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import NotFound from './components/NotFound/NotFound'
@@ -27,7 +27,7 @@ function App() {
         { path: 'categories', element: <ProtectedRoute>  <Categories />  </ProtectedRoute> },
         { path: 'brands', element: <ProtectedRoute>  <Brands />  </ProtectedRoute> },
         { path: 'cart', element: <ProtectedRoute><Cart />  </ProtectedRoute> },
-        { path: 'product', element: <ProtectedRoute> <Products /> </ProtectedRoute> },
+        // { path: 'product', element: <ProtectedRoute> <Products /> </ProtectedRoute> },
         { path: 'ProductDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
         { path: 'checkout/:cartId', element: <ProtectedRoute> <Checkout /> </ProtectedRoute> },
         { path: 'allorders', element: <ProtectedRoute> <Orders /> </ProtectedRoute> },

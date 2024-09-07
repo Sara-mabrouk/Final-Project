@@ -31,7 +31,7 @@ export default function Navbar() {
                 {userToken &&
                     <div className="hidden md:flex space-x-3 lg:space-x-5">
                         <NavLink to={'/'} className="text-white hover:text-[#DBB5B5] text-lg">Home</NavLink>
-                        <NavLink to={'/product'} className="text-white hover:text-[#DBB5B5] text-lg">Products</NavLink>
+                        {/* <NavLink to={'/product'} className="text-white hover:text-[#DBB5B5] text-lg">Products</NavLink> */}
                         <NavLink to={'/categories'} className="text-white hover:text-[#DBB5B5] text-lg">Categories</NavLink>
                         <NavLink to={'/brands'} className="text-white hover:text-[#DBB5B5] text-lg">Brands</NavLink>
                         <NavLink to={'/cart'} className="text-white hover:text-[#DBB5B5] text-lg">Cart</NavLink>
