@@ -19,17 +19,18 @@ export default function Categories() {
     }, []);
 
     return (
-        <div className={`d-flex flex-wrap justify-content-center gy-2`}>
-            {categories.map((category) => (
-                <div key={category?._id} className="d-flex flex-column align-items-center text-center mb-4">
-                    <Link to={`/productDetails/${category?._id}`}>
-                        <div className='product cursor-pointer px-2 py-3'>
-                            <img className='imgCategory' src={category.image} alt={category.name} />
-                            <h3 className='h4 text-main mt-2'>{category?.name?.split(' ').slice(0, 2).join(' ')}</h3>
-                        </div>
-                    </Link>
-                </div>
-            ))}
+        <div className="row">
+            {categories.map((product) => <div key={product?._id} className="col-md-3 text-center px-2 py-2">
+
+                <Link to={`/ProductDetails/${product?._id}`}>
+                    <div className='product cursor-pointer  px-2 py-3'>
+                        <img className='imgCategory w-100' src={product?.image} alt="" />
+                        <h3 className='h4 text-main mt-2'>{product?.name?.split(' ').slice(0, 2).join(' ')}</h3>
+
+                    </div>
+                </Link>
+
+            </div>)}
         </div>
     );
 }

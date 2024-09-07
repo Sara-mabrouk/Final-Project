@@ -33,13 +33,13 @@ async function getCategories() {
     return <>
 
 <div className="py-5">
-<h2 className='text-green-700 py-4 text-center'>Shop Popular Categories</h2>
+<h2 className='text-[#987070] py-4 text-center'>Shop Popular Categories</h2>
 <Slider {...settings}>
 
 {categories.map((category)=>
 <div>
 <img className='category-img w-full p-2' src={category.image} alt="" />  
-<h3 className="font-light mt-2 text-green-600">{category.name}</h3>  
+<h3 className="font-light mt-2 text-[#987070]">{category.name}</h3>  
 </div>)}
 </Slider >
 

@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+.row{
+    @apply flex flex-wrap py-8 px-4 items-center;
+}
 @layer utilities {
 
     input[type="number"]::-webkit-inner-spin-button,
@@ -69,21 +70,21 @@
 .btn-accent {
     --tw-text-opacity: 1;
     color: var(#f0f3f2);
-    outline-color: var(#0aad0a);
-    background-color: var(#0aad0a);
+    outline-color: var(#987070);
+    background-color: var(#987070);
 }
 
 .btn-accent {
-    --btn-color: #0aad0a;
+    --btn-color: #987070;
 }
 
 .btn-accent:hover {
-    background-color: #39d039;
+    background-color: #C39898;
 }
 
 
 .title{
-    color: #121212;
+    color: #987070;
 }
 
 .sub-title{
@@ -152,7 +153,79 @@ select.input-error{
 }
 
 .btn[disabled], .btn:disabled {
-    background-color: #0aad0a;
+    background-color: #987070;
     opacity: 0.6;
     color: #eeeeee9b;
+}
+
+:root
+{
+    --main-color:#987070;
+    --light-color:#C39898;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.network{
+    padding: 10px;
+    position:fixed;
+    border:var(--main-color) solid 1px;
+    bottom:30px;
+    left: 30px;
+    background-color: var(--light-color);
+    
+    box-shadow:var(--shadow);
+    z-index: 9999999;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+.border-main{
+    border:solid 1px var(--main-color) !important
 }

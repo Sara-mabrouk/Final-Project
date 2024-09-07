@@ -32,12 +32,14 @@ export default function Home() {
                     <>
                         <MainSlider />
                         <CategoriesSlider />
-                        <div className='d-flex flex-wrap justify-content-center gap-2'>
+                        <h2 className='text-[#987070] py-4 text-center'>Shop Popular Products</h2>
+                        <div className='row'>
                             {products.map((product, index) => {
                                 return <Products product={product} key={index} />
                             })}
 
-                        </div></>
+                        </div>
+                        </>
 
             }
         </>
