@@ -6,13 +6,7 @@ import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 export default function Cart() {
     const [isLoading, setIsLoading] = useState(false)
-
     const [cart, setCart] = useState(null)
-    useEffect(() => {
-        getUserCart()
-
-    }, [])
-
 
     async function getUserCart() {
         setIsLoading(true)
@@ -25,7 +19,10 @@ export default function Cart() {
         setIsLoading(false)
 
     }
+    useEffect(() => {
+        getUserCart()
 
+    }, [])
     return (  <>
         {
             isLoading ?
