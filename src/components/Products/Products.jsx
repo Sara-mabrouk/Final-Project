@@ -53,6 +53,9 @@ export default function Products({ product }) {
                         </div>
                     </div>
                 </div>
-            </div></>
+                
+            </div>
+            
+            </>
     )
 }
