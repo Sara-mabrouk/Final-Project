@@ -33,7 +33,7 @@ function App() {
         { path: 'ProductDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
         { path: 'checkout/:cartId', element: <ProtectedRoute> <Checkout /> </ProtectedRoute> },
         { path: 'allorders', element: <ProtectedRoute> <Orders /> </ProtectedRoute> },
-        {path:'/wishList', element:<WishList/>},
+        {path:'wishList', element:<WishList/>},
 
         { path: 'login', element:<ProtectedAuth><Login /></ProtectedAuth>  },
         { path: 'register', element: <ProtectedAuth><Register /></ProtectedAuth> },

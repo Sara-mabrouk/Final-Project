@@ -1,16 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
-
+import Style from './WishList.module.css'
 export default function WishList() {
-
-
-
-
-    useEffect(() => {
-
-
-
-
-    }, [])
+    const [counter, setcounter] = useState(0);
+    useEffect(() => { }, [])
     return <>
 
         <h2>TempName</h2>
