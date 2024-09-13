@@ -19,7 +19,6 @@ import ProductDetails from './components/ProductDetails/ProductDetails'
 import Checkout from './components/Checkout/Checkout'
 import { ToastContainer } from 'react-toastify'
 import Orders from './components/Orders/Orders'
-import WishList from './Components/WishList/WishList';
 
 function App() {
   let router = createBrowserRouter([
@@ -33,9 +32,8 @@ function App() {
         { path: 'ProductDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
         { path: 'checkout/:cartId', element: <ProtectedRoute> <Checkout /> </ProtectedRoute> },
         { path: 'allorders', element: <ProtectedRoute> <Orders /> </ProtectedRoute> },
-        {path:'wishList', element:<WishList/>},
 
-        { path: 'login', element:<ProtectedAuth><Login /></ProtectedAuth>  },
+        { path: 'login', element: <ProtectedAuth><Login /></ProtectedAuth> },
         { path: 'register', element: <ProtectedAuth><Register /></ProtectedAuth> },
 
         { path: '*', element: <NotFound /> }
